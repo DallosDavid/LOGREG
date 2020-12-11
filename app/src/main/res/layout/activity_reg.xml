@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reg"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nev"
+        android:textSize="25sp"
+        android:id="@+id/edit_rog_nev"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="25sp"
+        android:inputType="textEmailAddress"
+        android:id="@+id/edit_rog_email"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jelszo"
+        android:textSize="25sp"
+        android:inputType="textPassword"
+        android:id="@+id/edit_rog_nevjelsz"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Teljes név"
+        android:textSize="25sp"
+        android:id="@+id/edit_rog_tnev"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regisztrácio"
+        android:textSize="25sp"
+        android:enabled="false"
+        android:id="@+id/bttn_regiszt"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/re_visz"
+        android:text="Vizsa"
+        android:textSize="25sp"
+        />
+
+   /<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_adatok"
+        android:textSize="25sp"
+        android:maxLines="999"
+        android:scrollbars="vertical"
+        />
+
+</LinearLayout>
