@@ -4,17 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.sql.SQLInput;
-
-public class LoggedActivity extends AppCompatActivity {
+public class LoggedInActivity extends AppCompatActivity {
 
     TextView textView;
     Button butan_ki;
@@ -33,7 +29,7 @@ public class LoggedActivity extends AppCompatActivity {
         butan_ki.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoggedActivity.this,MainActivity.class));
+                startActivity(new Intent(LoggedInActivity.this,MainActivity.class));
             finish();
             }
         });
@@ -77,6 +73,6 @@ public class LoggedActivity extends AppCompatActivity {
     private void inti() {
         textView = (TextView)findViewById(R.id.teljesnev);
         butan_ki = (Button) findViewById(R.id.btn_main);
-        adatbazis = new DBhelper(LoggedActivity.this);
+        adatbazis = new DBhelper(LoggedInActivity.this);
     }
 }

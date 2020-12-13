@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Reg extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     DBhelper adabazis;
     EditText nev,emial,jelszo,teljesznev;
@@ -33,7 +33,7 @@ public class Reg extends AppCompatActivity {
         bvisza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Reg.this,MainActivity.class));
+                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
                 finish();
             }
         });
@@ -126,7 +126,7 @@ public class Reg extends AppCompatActivity {
 
 
         if (neve1.isEmpty() || email1.isEmpty() || jelso1.isEmpty() || teljesn1.isEmpty()) {
-            Toast.makeText(Reg.this, "Kérem töltse ki az öszes mezöt.", Toast.LENGTH_SHORT).show(); return;
+            Toast.makeText(RegisterActivity.this, "Kérem töltse ki az öszes mezöt.", Toast.LENGTH_SHORT).show(); return;
         } else {
 
             boolean elen=adabazis.NevEllenor(neve1);
@@ -159,6 +159,7 @@ public class Reg extends AppCompatActivity {
                 System.out.println("JO név nagybetus");
             }else
             {
+                Toast.makeText(this, "Kisbetüvel kezdodik az egyik ami a Teljes névben.", Toast.LENGTH_SHORT).show();
                 System.out.println("Nem jo naygbetus");
             }
 
@@ -166,7 +167,7 @@ public class Reg extends AppCompatActivity {
                 boolean sikeres = adabazis.regiszt(email1, neve1, jelso1, teljesn1);
 
                 if (sikeres) {
-                    Toast.makeText(Reg.this, "Sikeres regiszt", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Sikeres regiszt", Toast.LENGTH_SHORT).show();
 
                     return;
                 }
@@ -213,6 +214,6 @@ public class Reg extends AppCompatActivity {
         text_adak =(TextView)findViewById(R.id.text_adatok);
         bvisza = (Button)findViewById(R.id.re_visz);
         breg = (Button)findViewById(R.id.bttn_regiszt);
-        adabazis =  new DBhelper(Reg.this);
+        adabazis =  new DBhelper(RegisterActivity.this);
     }
 }

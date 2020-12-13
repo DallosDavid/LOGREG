@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         button_reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            startActivity(new Intent(MainActivity.this,Reg.class));
+            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             finish();
             }
         });
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         if(neve){
 
             String datrt = editText_fel.getText().toString().trim();
-            Intent passdat_int=new Intent(MainActivity.this,LoggedActivity.class);
+            Intent passdat_int=new Intent(MainActivity.this, LoggedInActivity.class);
             passdat_int.putExtra("data1",datrt);
             startActivity(passdat_int);
             finish();
